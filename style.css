@@ -1,0 +1,455 @@
+* {
+  /* box-sizing: border-box; */
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: Ubuntu-Bold;
+  src: url('./assets/fonts/Ubuntu-Bold.ttf');
+}
+
+@font-face {
+  font-family: Ubuntu-Medium;
+  src: url('./assets/fonts/Ubuntu-Medium.ttf');
+}
+
+@font-face {
+  font-family: Ubuntu-Regular;
+  src: url('./assets/fonts/Ubuntu-Regular.ttf');
+}
+
+body {
+  font-size: 16px;
+  
+}
+.red{
+  background: red;
+}
+
+/* Main container start */
+.main-container1{
+  background: hsl(217, 100%, 97%);
+  position: relative;
+  height: 35em;
+  /* width: 356px; */
+ 
+}
+/* Main container end */
+/* Personal container start */
+.main-container{
+  
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.pages {
+  position: absolute;
+  top: 25px;
+}
+
+.pages>.tab {
+  border-radius: 50%;
+  text-align: center;
+  color: hsl(0, 0%, 100%);
+  border: 1px solid hsl(0, 0%, 100%);
+  padding:10px;
+  margin: 5px;
+  display: inline-block; 
+  font-weight: bold;
+  font-size: 12px;
+  height: 15px;
+  width: 15px;
+}
+
+.tab:first-child,.active{
+  color: hsl(213, 96%, 18%);
+  background:#bfe2fd;
+}
+
+.containers{
+  position: absolute;
+  background: hsl(0, 0%, 100%);
+  width: 350px;
+  height: 345px;
+  border-radius: 10px;
+  align-self: center;
+  top: 99.5px;
+  display: flex;
+  flex-direction: column;
+  
+}
+.two{
+  height: 405px;
+}
+.heading{
+  font-family: Ubuntu-Bold;
+  color: #02295a;
+  padding:32px 0 7px 18px ; 
+}
+
+#error-mgs{
+  display: none;
+  color: #e35252;
+  font-family: Ubuntu-Bold;
+  margin-left: 20px;
+}
+
+.paragraph,#go-back,#go-back-for2,.plan-boxes,.date,.p-input,.plan-boxes1,.plan-boxes3{
+  font-family: Ubuntu-Regular;
+  width: 250px;
+  color:hsl(231, 11%, 63%);
+  margin-left: 18px;
+
+}
+
+.p-one{
+  margin-bottom: 15px;
+}
+.per-month {
+  color:hsl(233, 11%, 71%) !important;
+  margin-top: -2px;
+}
+
+.yearly,a{
+  font-family: Ubuntu-Regular;
+  color:hsl(231, 11%, 63%);
+}
+
+.last-p{
+  width: 260px;
+}
+.last-p1{
+  width: 215px;
+
+}
+.last-p2{
+  width: 218px;
+
+}
+
+ label{
+  margin:20px 0 30px 18px !important;
+  color: hsl(213, 96%, 18%);
+  font-weight: lighter;
+
+} 
+
+.p-input{
+  height:3em;
+  width: 21em;
+  padding-left: 1.3em;
+  border-radius: .50em;
+  border:1px solid #d6d9e6; /* light */
+  font-family: Ubuntu-Bold;
+  font-size: 14px;
+}
+::placeholder{
+  color: hsl(231, 11%, 63%);
+}
+/* Personal container end /
+
+/* Plan container start */
+#containers{
+  height: 405px;
+}
+.plan-boxes,.plan-boxes1,.plan-boxes3{
+  display: flex;
+  height: 35px;
+  width: 18em;
+  border: 1px solid hsl(231, 18%, 78%);
+  border-radius: 10px;
+  margin-top: 10px;
+  outline: none;
+  padding: 12px;
+  cursor: pointer;
+}
+/* .plan-border{
+  background: hsl(216, 29%, 97%);
+  border:1px solid #473dff;
+} */
+
+.plans{
+  margin-left: 14px;
+  display: flex;
+  flex-direction: column;
+}
+
+.finishUp h5,h4,h5{
+  color: hsl(213, 96%, 18%);
+  font-family: Ubuntu-Bold;
+  margin-bottom: 4px;
+}
+.plans span p{
+  font-family: Ubuntu-Regular;
+  font-size: 14px;
+  /* margin-bottom: 3px; */
+}
+
+.back-p{
+  font-size: 15px;
+}
+.plans .free,#thank-you{
+  color: hsl(213, 96%, 18%);
+  font-family: Ubuntu-Regular;
+  /* padding-bottom: 2px; */
+}
+.free{
+  display: none;
+}
+
+.date{
+  width: 19.5em;
+  background: hsl(231, 100%, 99%);
+  height: 40px;
+  display:flex;
+  justify-content: space-around;
+  padding:14px 0px 0px 0px;
+  border-radius: 10px;
+  margin-top: 20px;
+  color: hsl(213, 96%, 18%);
+  font-family: Ubuntu-Medium;
+}
+/* Personal container end */
+
+/* Add-ons container start */
+
+.t-rate,.f-rate,.t-rate2{
+ position: absolute;
+ bottom: 47px;
+ right: 30px;
+ font-family: Ubuntu-Bold;
+ font-size: 13px;
+ /* color:  hsl(228, 82%, 70%); */
+ color: hsl(243, 79%, 60%);
+}
+
+.t-rate2{
+  bottom: 22px;
+  right: 40px;
+  font-size: 16px;
+}
+
+.f-rate{
+  /* position: absolute; */
+ top: 140px;
+ right: 36px;
+ font-size: 16px;
+ color: hsl(213, 96%, 18%);
+}
+
+.rate-2{
+  bottom: 120px;
+}
+.rate-1{
+  bottom: 193px;
+}
+
+/* Add-ons container end */
+
+/* Finishing Up container start */
+.finishUp {
+  height: 150px;
+  border: none;
+  background: hsl(231, 100%, 99%);
+
+}
+hr{
+ margin: 15px 0;   
+ width: 270px;
+ border: 0;
+ border-top: 1px solid hsl(229, 24%, 87%)
+}
+
+.flex-item,.flex-item1{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.flex-item1{
+  margin-top: 5px;
+}
+.flex-item p,.flex-item1 p{
+  margin-left: 0;
+
+}
+.flex-item #back-p,.flex-item1 #back-p{
+  margin-left: -40px;
+  color: hsl(213, 96%, 18%);
+  
+
+}
+
+.space-b{
+  padding: 0 40px;
+}
+/* Finishing Up container end */
+
+/* Thank you container start */
+/* .five{
+  display: flex;
+  flex-direction: column;
+} */
+#thank-icon,#thank-you,.thank-p,.thank-p2,.thank-p3,.thank-p4,.thank-p5{
+  position: absolute;
+  right: 35%;
+  top: 15%;
+}
+#thank-you{
+  right: 30%;
+  top: 45%;
+  font-family: Ubuntu-Bold;
+}
+
+.thank-p{
+  width: 295px;
+  right: 25px;
+  top: 55%;
+}
+
+.thank-p2{
+  right: 38px;
+  top: 62%;
+}
+
+.thank-p3{
+  width: 257px;
+  right: 41px;
+  top: 69%;
+}
+.thank-p4{
+  width: 257px;
+  right: 21px;
+  top: 76%;
+}
+.thank-p5{
+  right: 19px;
+  top: 83%;
+}
+/* Thank you container end */
+
+/* Footer buttons start */
+#go-back,#go-back-for2{
+  position: absolute;
+  left:-3px;
+  bottom:20px;
+  font-family: Ubuntu-Bold;
+  text-decoration: none;
+}
+
+#next-btn,#next-btn-for3,#next-btn-for4,#confirm-btn{
+  position: absolute;
+  right:20px;
+  bottom:7px;
+  background: hsl(213, 96%, 18%);
+  color: hsl(0, 0%, 100%);
+  font-family: Ubuntu-Bold;
+  padding: 0.88em;
+  border-radius: 5px;
+  height: 3em;
+  text-align: center;
+  border: none;
+}
+
+#confirm-btn{
+  background: hsl(243, 100%, 62%);
+  width: 100px;
+  display: none;
+}
+
+#change-arcade:hover{
+ color: hsl(243, 100%, 62%);
+}
+
+
+/* Toggle button */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 45px;
+  height: 23px;
+  padding-right: 3px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: hsl(213, 96%, 18%);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #02295a;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px hsl(213, 96%, 18%);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.switch-con{
+  position: absolute;
+  right:143px;
+  bottom: 1px;
+}
+/* Footer buttons end */
+
+/* Display each container invisible */
+.containers,#go-back{
+  display: none;
+}
+
+input {
+  margin-bottom: 15px;
+  color: red;
+  /* width: 5px; */
+}
+
+#go-back-for2{
+  display: none;
+}
+
