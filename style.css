@@ -4,6 +4,7 @@
   padding: 0;
 }
 
+
 @font-face {
   font-family: Ubuntu-Bold;
   src: url('./assets/fonts/Ubuntu-Bold.ttf');
@@ -23,9 +24,9 @@ body {
   font-size: 16px;
   
 }
-.red{
-  background: red;
-}
+
+/* @media screen and (max-width:375px) {} */
+  
 
 /* Main container start */
 .main-container1{
@@ -38,7 +39,7 @@ body {
 /* Main container end */
 /* Personal container start */
 .main-container{
-  
+
   display: flex;
   flex-direction: column;
   position: relative;
@@ -128,11 +129,10 @@ body {
 }
 .last-p1{
   width: 215px;
-
 }
+
 .last-p2{
   width: 218px;
-
 }
 
  label{
@@ -171,10 +171,10 @@ body {
   padding: 12px;
   cursor: pointer;
 }
-/* .plan-border{
-  background: hsl(216, 29%, 97%);
+.plan-boxes:hover{
+  background: #f5f7fa;   /* boxes */
   border:1px solid #473dff;
-} */
+}
 
 .plans{
   margin-left: 14px;
@@ -199,7 +199,7 @@ body {
 .plans .free,#thank-you{
   color: hsl(213, 96%, 18%);
   font-family: Ubuntu-Regular;
-  /* padding-bottom: 2px; */
+
 }
 .free{
   display: none;
@@ -290,13 +290,7 @@ hr{
 .space-b{
   padding: 0 40px;
 }
-/* Finishing Up container end */
 
-/* Thank you container start */
-/* .five{
-  display: flex;
-  flex-direction: column;
-} */
 #thank-icon,#thank-you,.thank-p,.thank-p2,.thank-p3,.thank-p4,.thank-p5{
   position: absolute;
   right: 35%;
@@ -339,15 +333,16 @@ hr{
 #go-back,#go-back-for2{
   position: absolute;
   left:-3px;
-  bottom:20px;
+  top:520px;
   font-family: Ubuntu-Bold;
   text-decoration: none;
+  cursor: pointer;
 }
 
-#next-btn,#next-btn-for3,#next-btn-for4,#confirm-btn{
+#next-btn,#next-btn2,#next-btn-for3{
   position: absolute;
   right:20px;
-  bottom:7px;
+  top:515px;
   background: hsl(213, 96%, 18%);
   color: hsl(0, 0%, 100%);
   font-family: Ubuntu-Bold;
@@ -356,15 +351,20 @@ hr{
   height: 3em;
   text-align: center;
   border: none;
+  display: none;
+  cursor: pointer;
+}
+#next-btn2{
+  display: block;
 }
 
-#confirm-btn{
+/* #confirm-btn{
   background: hsl(243, 100%, 62%);
   width: 100px;
   display: none;
-}
+} */
 
-#change-arcade:hover{
+.double-check:hover{
  color: hsl(243, 100%, 62%);
 }
 
@@ -439,7 +439,7 @@ input:checked + .slider:before {
 /* Footer buttons end */
 
 /* Display each container invisible */
-.containers,#go-back{
+#go-back{
   display: none;
 }
 
@@ -452,4 +452,25 @@ input {
 #go-back-for2{
   display: none;
 }
+
+span>input{
+  background: red;
+}
+
+
+  
+
+/* @media screen and (min-width:845px) {
+  .main-container{
+    width: 100%;
+
+    background: red;
+
+  }
+  .header{
+    width: 100%;
+ 
+  }
+ 
+} */
 
