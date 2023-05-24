@@ -61,18 +61,21 @@ toggleSwitch.addEventListener("click", () => {
 
 //RECONFIRMING ARCADE
 doubleCheck.forEach(reconfirm=>{
+  
+  
   reconfirm.addEventListener('click',()=>{ 
-   if(currentComponent==5 || currentComponent==6){ 
-    if(currentComponent==6){
-      nextBtn.innerHTML='Next Step';
-      nextBtn.style.background='#02295a';
-    }
-      tab[1].style = ` color: #02295a;background:#bfe2fd;`;
-      tab[3].style = ` color: #fff;background:transparent;`;
-      alert('GO BACK TO 2 FOR CROSS CHECK')
-      currentComponent=2
-      showComponent(currentComponent)
-   }  
+    if(currentComponent==5 || currentComponent==6){ 
+      if(currentComponent==6){
+        nextBtn.innerHTML='Next Step';
+        nextBtn.style.background='#02295a';
+      }
+        tab[1].style = ` color: #02295a;background:#bfe2fd;`;
+        tab[3].style = ` color: #fff;background:transparent;`;
+        alert('GO BACK TO 2 FOR CROSS CHECK')
+        currentComponent=2
+        showComponent(currentComponent)
+    } 
+   
 });
 })
 
@@ -83,7 +86,7 @@ pickaddOn.forEach(box=>{
     obj = e.target
     obj.classList.add('red')
     if( obj.checked){
-   
+      currentComponent=5
       obj.parentNode.parentNode.style ='background:#f5f7fa;border:1px solid #473dff;' 
    }
    else{ 
@@ -209,7 +212,7 @@ function previousComponent() {
 
     goBack.style.display ='none'
     nextBtn.style.display='none'
-    nextBtn2.style.display='block'
+    // nextBtn2.style.display='block'
   }
   if(currentComponent==2){
     tab[0].style = ` background:transparent;color:white;`;
@@ -229,8 +232,15 @@ function previousComponent() {
     tab[1].style = ` background:transparent;color:white;`;
     tab[2].style = ` background:transparent;color:white;`;
     tab[3].style = `color: #02295a;background:#bfe2fd;`;
+
+    nextBtn.style.background='#02295a';
+    nextBtn.innerHTML='Next Step'
+
   }
   // tab[1].style = ` color: #02295a;background:#bfe2fd;`;
 }
 
 showComponent(currentComponent);
+
+
+
