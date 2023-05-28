@@ -62,7 +62,6 @@ toggleSwitch.addEventListener("click", () => {
 //RECONFIRMING ARCADE
 doubleCheck.forEach(reconfirm=>{
   
-  
   reconfirm.addEventListener('click',()=>{ 
     if(currentComponent==5 || currentComponent==6){ 
       if(currentComponent==6){
@@ -73,7 +72,7 @@ doubleCheck.forEach(reconfirm=>{
         tab[3].style = ` color: #fff;background:transparent;`;
         alert('GO BACK TO 2 FOR CROSS CHECK')
         currentComponent=2
-        showComponent(currentComponent)
+        showComponent(currentComponent,1)
     } 
    
 });
@@ -96,7 +95,7 @@ pickaddOn.forEach(box=>{
 })
 
 
-function showComponent(componentNumber) {
+function showComponent(componentNumber,year=0) {
   const components = document.getElementsByClassName("component");
   for (let i = 0; i < components.length; i++) {
     components[i].style.display = "none";
@@ -203,7 +202,6 @@ function previousComponent() {
     showComponent(currentComponent);
   }
   
-
   if(currentComponent==1){
     tab[0].style = ` color: #02295a;background:#bfe2fd;`;
     tab[1].style = ` background:transparent;color:white;`;
@@ -241,6 +239,4 @@ function previousComponent() {
 }
 
 showComponent(currentComponent);
-
-
 
