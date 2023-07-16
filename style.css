@@ -457,7 +457,9 @@ span>input{
   background: red;
 }
 
-
+.red{
+  color: red;
+}
   
 
 /* @media screen and (min-width:845px) {

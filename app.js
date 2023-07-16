@@ -9,7 +9,7 @@ const finishingUp = document.querySelector(".four");
 const thankYou = document.querySelector(".five");
 
 const goBack = document.querySelector("#go-back");
-const goBackFor2 = document.querySelector("#go-back-for2");
+// const goBackFor2 = document.querySelector("#go-back-for2");
 const doubleCheck = document.querySelectorAll(".double-check")
 
 const tab = document.querySelectorAll(".tab");
@@ -85,28 +85,52 @@ function validateComponent1() {
 
 toggleSwitch.addEventListener("click", () => {
   changeToggleState = !changeToggleState;
-
+  alert(changeToggleState)
   changeToggleState == false ? planType = 'mo' : planType = 'yr';
 
   if (changeToggleState == true) {
     free.forEach((fr) => (fr.style.display = "block"));
-    month[0].innerHTML = `$${arcadeAmount * 10}/${planType}`;
+    month[0].innerHTML = `$${arcadeAmount * 10}/${planType}`; //slash not division
     month[1].innerHTML = `$${advancedAmount * 10}/${planType}`;
     month[2].innerHTML = `$${proAmount * 10}/${planType}`;
 
-    plansin3[0].innerHTML = '$10 / yr'
-    plansin3[1].innerHTML = '$20 / yr'
-    plansin3[2].innerHTML = '$20 / yr'
-
-    alert('Hello')
     headn.forEach((hd) => (hd.style.marginTop = "-5px"));
-    // alert('MOVE TO YR:' + currentComponent++)
+
+    // For Component 3
+    plansin3[0].innerHTML = '$10/yr'
+    plansin3[1].innerHTML = '$20/yr'
+    plansin3[2].innerHTML = '$20/yr'
+
+    // For Component 4
+    monthly[0].innerHTML = '$190/yr'
+    monthly[1].innerHTML = '$10/yr'
+    monthly[2].innerHTML = '$20/yr'
+    monthly[3].innerHTML = '$120/yr'
+
+    alert(monthToYear.textContent.replace(/month/i,'year'))
+    monthToYear.textContent = (monthToYear.textContent.replace(/month/i,'year'))
+
+   
   }
   if (changeToggleState == false) {
     free.forEach((fr) => (fr.style.display = "none"));
     month[0].innerHTML = `$${arcadeAmount}/${planType}`;
-    month[1].innerHTML = `$${advancedAmount}/${planType}`;
+    month[1].innerHTML = `$${advancedAmount}/${planType}`; //slash not division
     month[2].innerHTML = `$${proAmount}/${planType}`;
+
+     // For Component 3
+     plansin3[0].innerHTML = `$1/${planType}`;
+     plansin3[1].innerHTML = '$2/mo';
+     plansin3[2].innerHTML = '$2/mo';
+
+       // For Component 4
+    monthly[0].innerHTML = `$90/${planType}`;
+    monthly[1].innerHTML = `$1/${planType}`;
+    monthly[2].innerHTML = `$2/${planType}`;
+    monthly[3].innerHTML = '$12/mo';
+
+    alert(monthToYear.textContent.replace(/year/i,'month'))
+    monthToYear.textContent = (monthToYear.textContent.replace(/year/i,'month'))
 
   }
 });
@@ -132,12 +156,12 @@ doubleCheck.forEach(reconfirm => {
 
 
 pickaddOn.forEach(box => {
-  box.addEventListener('change', (e) => {
-    alert(`MOVE TO YR OF FOUR:${++currentComponent}`)
+  box.addEventListener('change',(e) => {
+  //  ++currentComponent
     obj = e.target
     obj.classList.add('red')
     if (obj.checked) {
-      currentComponent = 5
+      // currentComponent = 5
       obj.parentNode.parentNode.style = 'background:#f5f7fa;border:1px solid #473dff;'
     }
     else {
@@ -149,7 +173,7 @@ pickaddOn.forEach(box => {
 
 function showComponent(componentNumber) {
 
-  console.log(totalComponents);
+  // console.log(totalComponents);
   for (let i = 0; i < totalComponents; i++) {
 
     components[i].style.display = "none";
@@ -184,6 +208,7 @@ function nextComponent() {
     nextBtn.style.display = 'block';
   }
   if (currentComponent == 3) {
+
     tab[0].style = ` background:transparent;color:white`;
     tab[1].style = ` background:transparent;color:white;`;
     tab[2].style = ` color: #02295a;background:#bfe2fd;`;
@@ -217,6 +242,7 @@ function nextComponent() {
 }
 
 function previousComponent() {
+ 
   if (currentComponent > 1) {
     currentComponent--;
     showComponent(currentComponent);
@@ -228,9 +254,8 @@ function previousComponent() {
     tab[2].style = ` background:transparent;color:white;`;
     tab[3].style = ` background:transparent;color:white;`;
 
-    goBack.style.display = 'none'
-    nextBtn.style.display = 'none'
-    // nextBtn2.style.display='block'
+    goBack.style.display = 'none';
+ 
   }
   if (currentComponent == 2) {
     tab[0].style = ` background:transparent;color:white;`;
@@ -240,6 +265,8 @@ function previousComponent() {
 
   }
   if (currentComponent == 3) {
+    nextBtn.innerHTML = 'Next Step'
+    nextBtn.style.background = '#02295a';
     tab[0].style = ` background:transparent;color:white;`;
     tab[1].style = ` background:transparent;color:white;`;
     tab[2].style = `color: #02295a;background:#bfe2fd;`;
