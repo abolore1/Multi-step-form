@@ -37,7 +37,6 @@ const totalComponents = components.length;
 nextBtn.style.display = 'none';
 
 
-
 let arcadeAmount = 9;
 let advancedAmount = 12;
 let proAmount = 15;
@@ -85,7 +84,7 @@ function validateComponent1() {
 
 toggleSwitch.addEventListener("click", () => {
   changeToggleState = !changeToggleState;
-  alert(changeToggleState)
+  // alert(changeToggleState)
   changeToggleState == false ? planType = 'mo' : planType = 'yr';
 
   if (changeToggleState == true) {
@@ -107,8 +106,7 @@ toggleSwitch.addEventListener("click", () => {
     monthly[2].innerHTML = '$20/yr'
     monthly[3].innerHTML = '$120/yr'
 
-    alert(monthToYear.textContent.replace(/month/i,'year'))
-    monthToYear.textContent = (monthToYear.textContent.replace(/month/i,'year'))
+    monthToYear.textContent = monthToYear.textContent.replace(/month/i,'year')
 
    
   }
@@ -120,17 +118,16 @@ toggleSwitch.addEventListener("click", () => {
 
      // For Component 3
      plansin3[0].innerHTML = `$1/${planType}`;
-     plansin3[1].innerHTML = '$2/mo';
-     plansin3[2].innerHTML = '$2/mo';
+     plansin3[1].innerHTML = `$2/${planType}`;
+     plansin3[2].innerHTML = `$2/${planType}`;
 
        // For Component 4
     monthly[0].innerHTML = `$90/${planType}`;
     monthly[1].innerHTML = `$1/${planType}`;
     monthly[2].innerHTML = `$2/${planType}`;
-    monthly[3].innerHTML = '$12/mo';
+    monthly[3].innerHTML = `$12/${planType}`;
 
-    alert(monthToYear.textContent.replace(/year/i,'month'))
-    monthToYear.textContent = (monthToYear.textContent.replace(/year/i,'month'))
+    monthToYear.textContent = monthToYear.textContent.replace(/year/i,'month')
 
   }
 });
@@ -157,11 +154,10 @@ doubleCheck.forEach(reconfirm => {
 
 pickaddOn.forEach(box => {
   box.addEventListener('change',(e) => {
-  //  ++currentComponent
+  
     obj = e.target
-    obj.classList.add('red')
     if (obj.checked) {
-      // currentComponent = 5
+      obj.style.background='red'
       obj.parentNode.parentNode.style = 'background:#f5f7fa;border:1px solid #473dff;'
     }
     else {
@@ -174,7 +170,7 @@ pickaddOn.forEach(box => {
 function showComponent(componentNumber) {
 
   // console.log(totalComponents);
-  for (let i = 0; i < totalComponents; i++) {
+  for(let i = 0; i < totalComponents; i++) {
 
     components[i].style.display = "none";
   }
@@ -184,10 +180,8 @@ function showComponent(componentNumber) {
 }
 
 
-
-
 function nextComponent() {
-  console.log("are you calling this?");
+  // console.log("are you calling this?");
   if (currentComponent < totalComponents) {
     currentComponent++;
     showComponent(currentComponent);
@@ -226,13 +220,7 @@ function nextComponent() {
     tab[3].style = ` color: #02295a;background:#bfe2fd;`;
   }
 
-  // if (currentComponent == 4) {
-
-  //   tab[0].style = ` background:transparent;color:white;`;
-  //   tab[1].style = ` background:transparent;color:white;`;
-  //   tab[2].style = ` background:transparent;color:white;`;
-  //   tab[3].style = ` color: #02295a;background:#bfe2fd;`;
-  // }
+ 
 
   if (currentComponent == 5) {
     nextBtn.style.display = 'none';
@@ -285,4 +273,3 @@ function previousComponent() {
 }
 
 showComponent(currentComponent);
-
